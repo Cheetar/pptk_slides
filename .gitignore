@@ -1,0 +1,5 @@
+*.pyc
+/venv
+/tmp
+/static
+/db.sqlite3
