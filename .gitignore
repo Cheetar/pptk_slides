@@ -3,3 +3,4 @@
 /tmp
 /static
 /db.sqlite3
+/run/pptk.sock
