@@ -16,8 +16,9 @@ services:
       STATIC_ROOT: '/code/static/'
       MEDIA_ROOT: '/code/media/'
       ALLOWED_HOSTS: "*"
-      SECRET_KEY: "6d2e445309c2b7b6b9020f09de850e194e54175d5978f39558d42ca8bf5992a150f33549bdb8e82341bfe4c774555f30d1a7'
+      SECRET_KEY: "6d2e445309c2b7b6b9020f09de850e194e54175d5978f39558d42ca8bf5992a150f33549bdb8e82341bfe4c774555f30d1a7"
       DATABASES: "{'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'NAME': 'pptk', 'USER': 'pptk', 'PASSWORD': 'pptkpptk', 'HOST': 'db', 'PORT': '',}}"
+      DEBUG: "False"
     command: bash -c "sleep 5 && cd /code/ && python3 manage.py makemigrations --merge && python3 manage.py migrate && python3 manage.py collectstatic --noinput && gunicorn pptk_slides.wsgi -b unix:/code/run/pptk.sock --workers 3"
     volumes:
       - ./:/code
