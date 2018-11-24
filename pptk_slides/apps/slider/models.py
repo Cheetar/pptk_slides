@@ -12,7 +12,7 @@ class SlidePacket(models.Model):
 
 class Slide(models.Model):
     created = models.DateTimeField(auto_now_add=True)
-    upload = models.FileField(upload_to='slides/')
+    upload = models.ImageField(upload_to='slides/')
     slide_packet = models.ForeignKey(SlidePacket, on_delete=models.CASCADE)
 
     def __str__(self):

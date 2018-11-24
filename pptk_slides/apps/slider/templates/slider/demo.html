@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>PPTK Slides</title>
 
 		<link rel="stylesheet" href="{% static 'slider/reveal.js/css/reveal.css' %}">
 		<link rel="stylesheet" href="{% static 'slider/reveal.js/css/theme/black.css' %}">
@@ -35,37 +35,11 @@
 					</textarea>
 				</section>
 
-				<section>
-					<img class="presentation-photo" src="https://slidesjs.com/examples/standard/img/example-slide-1.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://www.burpee.com/on/demandware.static/-/Sites-BURPEE-Library/default/dwda849a8c/Images/Content/CLP%20Flowers/CATID-3710_Sunflowers.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://worldoffloweringplants.com/wp-content/uploads/2017/06/Daisies.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://clsimplex.com/images/releases/headers/quality-code.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://ledroideenchaine.com/wp-content/uploads/2016/08/Legacy-code.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://www.planwallpaper.com/static/images/Desktop-HD-Wallpaper-Free-Download-1.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://www.planwallpaper.com/static/images/Desktop-Wallpaper-HD7.jpg" />
-				</section>
-
-				<section>
-					<img class="presentation-photo" src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&h=650&w=940" />
-				</section>
+				{% for slide in slides %}
+					<section>
+						<img class="presentation-photo" src="{{ slide.upload.url }}" />
+					</section>
+				{% endfor %}
 
 				<section data-markdown id="end">
 					<textarea data-template>
