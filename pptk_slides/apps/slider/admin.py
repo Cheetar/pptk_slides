@@ -1,3 +1,15 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Slide, SlidePacket
+
+
+class SlideAdmin(admin.ModelAdmin):
+    pass
+
+
+class SlidePacketAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Slide, SlideAdmin)
+admin.site.register(SlidePacket, SlidePacketAdmin)
