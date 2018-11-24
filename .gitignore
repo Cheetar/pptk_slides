@@ -6,3 +6,4 @@
 /run/pptk.sock
 /.idea
 /pptk_slides/.env
+/media
