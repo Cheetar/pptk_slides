@@ -4,3 +4,5 @@ pytz==2018.5
 gunicorn==19.6.0
 Pillow==5.3.0
 psycopg2
+opencv-python==3.4.3.18
+Keras==2.1.3
