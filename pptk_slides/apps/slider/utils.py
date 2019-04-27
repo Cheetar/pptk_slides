@@ -15,3 +15,7 @@ def is_image_funny(img_file):
     model = load_model("PPTK-CNN.h5")
     prob_funny = model.predict(img)
     return random.uniform(0, 1) < prob_funny
+
+
+def download_image(path):
+    pass
